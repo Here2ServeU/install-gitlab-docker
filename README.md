@@ -66,16 +66,16 @@ The -d flag runs the containers in detached mode, meaning they will run in the b
 #### Step 3: Access GitLab
 
 * Once the installation is complete, you can access GitLab through your browser.
-* You can just open a browser and navigate to http://localhost (or replace localhost with the IP address you specified as the hostname, such as 162.148.1.124).
+* You can open a browser and navigate to http://localhost (or replace localhost with the IP address you specified as the hostname, such as 162.148.1.124).
 
-You will be prompted to set the root user's initial password. Once you have done so, you can log in to GitLab and start creating your repositories and projects.
+You will be prompted to set the root user's initial password. Once you do so, you can log in to GitLab and create your repositories and projects.
 
 #### Step 4: Manage GitLab with Docker Compose
 
 Docker Compose makes managing your GitLab instance easy. Below are a few essential commands you might need:
-* docker-compose down   -> **The command will stop GitLab and remove the containers.**
-* docker-compose logs -f  -> **The command will display the real-time logs from the GitLab container.**
-* docker-compose restart -> **The command will restart GitLab.**
+* docker-compose down   -> ***The command will stop GitLab and remove the containers.***
+* docker-compose logs -f  -> ***The command will display the real-time logs from the GitLab container.***
+* docker-compose restart -> ***The command will restart GitLab.***
 
 #### Step 5: Configure GitLab’s external_url
 
