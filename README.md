@@ -17,31 +17,10 @@ With these prerequisites covered, let’s dive into the steps to get GitLab runn
 
 #### Step 1: Create a docker-compose.yml File
 
-To begin, you need to define the Docker Compose configuration for GitLab. This file will specify the services (GitLab in our case), ports, and volume mounts for persisting data.
+To begin, could you please define the Docker Compose configuration for GitLab? This file will specify the services (GitLab in our case), ports, and volume mounts for persisting data.
 
-** Create a docker-compose.yml file in your project directory with the following content:**
-version: '3.8'
+Create a docker-compose.yml file in your project directory using the content from the docker-compose.yml file. 
 
-services:
-  gitlab:
-    image: gitlab/gitlab-ce:latest
-    platform: linux/amd64
-    container_name: gitlab
-    hostname: 162.148.1.124
-    restart: always
-    ports:
-      - "443:443"
-      - "80:80"
-      - "22:22"
-    volumes:
-      - gitlab_config:/etc/gitlab
-      - gitlab_logs:/var/log/gitlab
-      - gitlab_data:/var/opt/gitlab
-
-volumes:
-  gitlab_config:
-  gitlab_logs:
-  gitlab_data:
 
 ##### Breakdown of the docker-compose.yml File:
 
