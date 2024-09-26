@@ -15,7 +15,7 @@ Before getting started, make sure you have the following tools installed and con
 
 With these prerequisites covered, let’s dive into the steps to get GitLab running on your local machine.
 
-##### Step 1: Create a docker-compose.yml File
+#### Step 1: Create a docker-compose.yml File
 
 To begin, you need to define the Docker Compose configuration for GitLab. This file will specify the services (GitLab in our case), ports, and volume mounts for persisting data.
 
@@ -43,7 +43,7 @@ volumes:
   gitlab_logs:
   gitlab_data:
 
-**Breakdown of the docker-compose.yml File:**
+##### Breakdown of the docker-compose.yml File:
 
 * version: Specifies the Docker Compose version.
 * services: Defines the GitLab service with its image (gitlab/gitlab-ce:latest).
@@ -55,7 +55,7 @@ volumes:
 * 22: SSH for Git access
 * volumes: Mounts directories to persist GitLab’s configuration, logs, and data between restarts.
 
-###### Step 2: Launch GitLab with Docker Compose
+#### Step 2: Launch GitLab with Docker Compose
 
 Once you have the docker-compose.yml file set up, navigate to the directory where the file is located in your terminal and run the following command to start GitLab:
 
@@ -63,21 +63,21 @@ Once you have the docker-compose.yml file set up, navigate to the directory wher
 
 The -d flag runs the containers in detached mode, meaning they will run in the background. Docker will pull the required GitLab image and start the GitLab service.
 
-###### Step 3: Access GitLab
+#### Step 3: Access GitLab
 
 * Once the installation is complete, you can access GitLab through your browser.
 * You can just open a browser and navigate to http://localhost (or replace localhost with the IP address you specified as the hostname, such as 162.148.1.124).
 
 You will be prompted to set the root user's initial password. Once you have done so, you can log in to GitLab and start creating your repositories and projects.
 
-###### Step 4: Manage GitLab with Docker Compose
+#### Step 4: Manage GitLab with Docker Compose
 
 Docker Compose makes managing your GitLab instance easy. Below are a few essential commands you might need:
 * docker-compose down   -> **The command will stop GitLab and remove the containers.**
 * docker-compose logs -f  -> **The command will display the real-time logs from the GitLab container.**
 * docker-compose restart -> **The command will restart GitLab.**
 
-###### Step 5: Configure GitLab’s external_url
+#### Step 5: Configure GitLab’s external_url
 
 If you want to set a custom external URL for GitLab (e.g., http://localhost or a custom domain), you can modify the GitLab configuration file directly from the container.
 
