@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    platform: linux/amd64
+    container_name: gitlab
+    hostname: 192.168.1.144  # Replace this IP Address with the desired
+    restart: always
+    ports:
+      - "443:443"
+      - "80:80"
+      - "22:22"
+    volumes:
+      - gitlab_config:/etc/gitlab
+      - gitlab_logs:/var/log/gitlab
+      - gitlab_data:/var/opt/gitlab
+
+volumes:
+  gitlab_config:
+  gitlab_logs:
+  gitlab_data:
