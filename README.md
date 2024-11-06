@@ -61,7 +61,6 @@ Docker Compose makes managing your GitLab instance easy. Below are a few essenti
 * gitlab-rails console -e production
 * Enter the following commands:
 ```
-bash
   user = User.find_by(username: 'root')
   user.password = 'new_password'
   user.password_confirmation = 'new_password'
