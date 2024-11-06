@@ -56,7 +56,19 @@ Docker Compose makes managing your GitLab instance easy. Below are a few essenti
 * docker-compose logs -f  -> ***The command will display the real-time logs from the GitLab container.***
 * docker-compose restart -> ***The command will restart GitLab.***
 
-#### Step 5: Configure GitLab’s external_url
+#### Generate the Password
+* docker exec -it <gitlab-container-name> /bin/bash
+* gitlab-rails console -e production
+* Enter the following commands:
+```
+bash
+  user = User.find_by(username: 'root')
+  user.password = 'new_password'
+  user.password_confirmation = 'new_password'
+  user.save!
+```
+
+#### Step 6: Configure GitLab’s external_url
 
 If you want to set a custom external URL for GitLab (e.g., http://localhost or a custom domain), you can modify the GitLab configuration file directly from the container.
 
